@@ -1,0 +1,18 @@
+.header {
+    height: 56px;
+    width: 100%;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+}
+
+.nav_tab {
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: auto;
+    padding-bottom: auto;
+}
+
+.active {
+    color: var(--primary);
+}

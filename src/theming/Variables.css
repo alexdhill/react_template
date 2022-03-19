@@ -1,0 +1,25 @@
+:root {
+    --primary: #ff0000;
+    --secondary: #00ff00;
+    --tertiary: #0000ff;
+    --success: #000000;
+    --warning: #000000;
+    --danger: #000000;
+    --light: #000000;
+    --medium: #000000;
+    --dark: #000000;
+}
+
+@media (prefers-color-scheme: ddark) {
+    body {
+        --primary: #00ff00;
+        --secondary: #0000ff;
+        --tertiary: #ff0000;
+        --success: #000000;
+        --warning: #000000;
+        --danger: #000000;
+        --light: #000000;
+        --medium: #000000;
+        --dark: #000000;
+    }
+}
