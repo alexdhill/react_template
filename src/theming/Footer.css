@@ -3,7 +3,13 @@
     bottom: 0px;
     height: 56px;
     width: 100%;
-    padding: 6px;
+}
+
+.footer_content {
+    height: 100%;
+    width: calc(100% - 12px);
     display: flex;
     align-items: center;
+    margin-left: 6px;
+    margin-right: 6px;
 }

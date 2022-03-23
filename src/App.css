@@ -4,13 +4,8 @@ a {
 }
 
 .app {
-  max-width: 1500px;
-  min-width: 360px;
   width: 100%;
   height: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  justify-self: center;
 }
 
 .start_slot {

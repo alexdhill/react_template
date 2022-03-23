@@ -1,9 +1,15 @@
 .header {
     height: 56px;
     width: 100%;
-    padding: 6px;
+}
+
+.header_content {
+    margin-left: 6px;
+    margin-right: 6px;
     display: flex;
     align-items: center;
+    height: 100%;
+    width: calc(100% - 12px);
 }
 
 .nav_tab {

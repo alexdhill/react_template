@@ -7,25 +7,41 @@ import Header from "./components/Header";
 
 import './App.css';
 import "./theming/Variables.css";
+import Loading from "./components/Loading";
 
-const NavContext = createContext<[NavigateFunction, string, React.Dispatch<React.SetStateAction<string>>]>(null);
+interface SiteController {
+  nav: NavigateFunction,
+  activePage: string,
+  setActivePage: React.Dispatch<React.SetStateAction<string>>,
+  setLoading: React.Dispatch<React.SetStateAction<boolean>>
+}
+const Controller = createContext<SiteController>(null);
 
 const App: React.FC = () => {
   const nav = useNavigate();
   const [active, setActive] = useState<string>("/");
+  const [loading, setLoading] = useState<boolean>(false);
+
+  const controller = {
+    nav: nav,
+    activePage: active,
+    setActivePage: setActive,
+    setLoading: setLoading
+  }
 
   return (
-    <NavContext.Provider value={[nav, active, setActive]}>
-      <div className="app">
-        <Header />
-        <Router />
-        <Footer />
-      </div>
-    </NavContext.Provider>
+    <Controller.Provider value={controller}>
+        <div className="app">
+          <Loading open={loading} />
+          <Header />
+          <Router />
+          <Footer />
+        </div>
+    </Controller.Provider>
   );
 }
 
 export default App;
 export {
-  NavContext
+  Controller
 }
